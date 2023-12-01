@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: rgba(140, 196, 97, 1);
+    height: 100%;
+    width: 100%;
+
+}
+
+.box {
+    margin-top: 50px;
+    margin-left: 18em;
+    width: 54vw;
+    height: 22vh;
+    border: 2px solid white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hleft {
+    padding-top: 10px;
+    font-family: 'Roboto';
+    font-weight: 600;
+    padding-left: 12px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.hright {
+    display: flex;
+}
+
+.score {
+    /* position: relative; */
+    color: rgba(101, 101, 101, 1);
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid white;
+    width: 9vw;
+    height: 18vh;
+    border-radius: 12px;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.score1 {
+    color: rgba(101, 101, 101, 1);
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid white;
+    width: 9vw;
+    height: 18vh;
+    border-radius: 12px;
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+#score {
+    position: relative;
+    color: rgba(37, 37, 37, 1);
+    font-family: 'Roboto';
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+
+}
+
+#score1 {
+    position: relative;
+    color: rgba(37, 37, 37, 1);
+    font-family: 'Roboto';
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.select-info {
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    top: 4vh;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 0 50px;
+}
+
+.option {
+    position: relative;
+    height: 32vh;
+    width: 40vw;
+    left: 30vw;
+    top: 3em;
+}
+.con {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    padding-top: 16px;
+    padding-left: 14px;
+    cursor: pointer;
+}
+
+.computer {
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    padding-top: 16px;
+    padding-left: 14px;
+    display: none;
+}
+
+.sci {
+    background-color: rgba(189, 0, 255, 1);
+    left: 25rem;
+}
+
+.sto {
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 116, 182, 1);
+}
+
+.pap {
+    top: 12rem;
+    background-color: rgba(255, 169, 67, 1);
+    left: 12.5rem;
+
+}
+
+.line {
+    position: absolute;
+    border: 10px solid black;
+    width: 1em;
+    height: 19em;
+    background-color: black;
+}
+
+.line1 {
+    position: absolute;
+    height:27vw;
+    rotate: 90deg;
+    left: 19.2vw;
+    bottom: 2px;
+}
+
+.line2 {
+    rotate: 46deg;
+    left: 24.5em;
+}
+
+.line3 {
+    rotate: 134deg;
+    left: 9vw;
+}
+
+.item {
+    background-color: white;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+
+#item1 {
+    padding-left: 27px;
+    padding-top: 15px;
+}
+
+#item2 {
+    padding-left: 6px;
+    padding-top: 11px;
+}
+
+.item img {
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.user,
+.machine {
+    opacity: 0;
+}
+
+.win {
+    /*   win-modal */
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    top: 50vh;
+    display: none;
+}
+
+.you-win {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: 10%;
+    color: white;
+}
+
+.against {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.play {
+    background-color: white;
+    color: rgba(107, 107, 107, 1);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 10%;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 6px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.win>button {
+    margin-top: 6px;
+}
+.tie{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    top: 50vh;
+    display: none;
+}
+.tie-up{
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 30%;
+    color: white;
+}
+.replay{
+    background-color: white;
+    color: rgba(107, 107, 107, 1);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 10%;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 6px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    margin-top:10px;
+}
+.rule-book {
+    position: fixed;
+    border: 7px solid white;
+    width: 17vw;
+    height: 45vh;
+    border-radius: 13px;
+    background-color: rgba(0, 68, 41, 1);
+    top: 40vh;
+    right: 2vw;
+    display: none;
+}
+
+.rule-book p,
+li {
+    color: white;
+    font-size: 10px;
+    text-align: left;
+    font-weight: 400;
+    line-height: 15px;
+    padding-top: 12px;
+    padding-left: 6px;
+}
+
+.rule-book p {
+    top: 8px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.rule-book>ul {
+    padding-left: 20px;
+    list-style-type: none;
+
+}
+
+ul li::before {
+    content: "\25A0";
+    color: rgba(255, 214, 0, 1);
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+.cross{
+    position: relative;
+    height:7.5vh;
+    width: 7.5vh;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 1);
+    left:11.5rem;
+    bottom:17rem;
+    cursor: pointer;
+}
+.cros{
+    position:absolute;
+    height:6vh;
+    width: 6vh;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 1); 
+    left:4.5px;
+    top: 4.5px;
+}
+.cros > p{
+    font-family:'Dangrek';
+    font-size: 26px;
+    font-weight:400;
+    padding-right: 4px;
+}
+.btn-div {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    top: 9em;
+
+}
+
+.div1 {
+    position: absolute;
+    right: 7rem;
+    top: 33.45em;
+}
+
+.btn-rule {
+    height: 2rem;
+    width: 6rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 10px;
+    letter-spacing: 10%;
+    background-color: rgba(140, 196, 97, 1);
+    color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+}
+
+footer>button {
+    height: 2rem;
+    width: 6rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 10%;
+    background-color: rgba(140, 196, 97, 1);
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.btn-next {
+    display: none;
+    height: 2rem;
+    width: 6rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-family: 'Roboto';
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: 10%;
+    background-color: rgba(140, 196, 97, 1);
+    color: white;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.show {
+    top: 0;
+    left: 0;
+}
+
+.right {
+    top: 0;
+    left: 25rem;
+
+}
+
+/* Hurray part */
+.stars {
+    width: 34vw;
+    height: 42vh;
+    margin-left: 32%;
+    margin-top: 3rem;
+}
+
+.hurray {
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.huray {
+    font-weight: 600;
+    font-family: 'ROBOTO';
+    font-size: 90px;
+    color: white;
+    letter-spacing: 20%;
+}
+
+.game-won {
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    margin-top: 4%;
+}
+
+.win-part {
+    font-weight: 600;
+    font-family: 'ROBOTO';
+    font-size: 42px;
+    color: white;
+    letter-spacing: 20%;
+}
+
+.play-again {
+    width: 100%;
+    height: 3vh;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.modify {
+    background-color: white;
+    color: rgba(107, 107, 107, 1);
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 10%;
+    height: 2rem;
+    width: 6rem;
+    border-radius: 6px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.star3 {
+    position: absolute;
+    margin-left: 7rem;
+}
+
+.star9 {
+    position: absolute;
+    margin-left: 5rem;
+    margin-top: 2.5rem;
+}
+
+.star1 {
+    position: absolute;
+    margin-left: 0rem;
+    margin-top: 6rem;
+}
+
+.star5 {
+    position: absolute;
+    margin-left: 7rem;
+    margin-top: 13rem;
+}
+
+.star4 {
+    position: absolute;
+    margin-left: 10rem;
+    margin-top: 2.5rem;
+
+}
+
+.star2 {
+    position: absolute;
+    margin-left: 20rem;
+    margin-top: 1rem;
+}
+
+.star7 {
+    position: absolute;
+    margin-left: 25rem;
+    margin-top: 8rem;
+}
+
+.star6 {
+    height: 15vh;
+    position: absolute;
+    margin-left: 19rem;
+    margin-top: 9rem;
+}
+
+.vector {
+    height: 23vh;
+    position: absolute;
+    margin-left: 10rem;
+    margin-top: 5rem;
+}
